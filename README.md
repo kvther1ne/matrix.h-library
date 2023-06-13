@@ -1,21 +1,21 @@
 # matrix.h-library
 
-### Implementation of my own version of the matrix.h library in C
+### Реализация библиотеки matrix.h на языке С
 
-Library for processing numerical matrices in the C programming language implement basic operations with matrices:
+В данном проекте я реализовала свою библиотеку для обработки числовых матриц на языке программирования Си. Матрицы являются одной из базовых структур данных в программировании, например, они применяются для представления табличных значений, для вычислительных задач и нейронных сетей.
 
-1. Creating matrix int s21_create_matrix(int rows, int columns, matrix_t *result);
-2. Cleaning of matrices void s21_remove_matrix(matrix_t *A);
-3. Matrix comparison int s21_eq_matrix(matrix_t *A, matrix_t *B);
-4. Adding matrices int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-5. Substracting matrices int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-6. Matrix multiplication by scalar int s21_mult_number(matrix_t *A, double number, matrix_t *result);
-7. Multiplication of two matrices int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-8. Matrix transpose int s21_transpose(matrix_t *A, matrix_t *result);
-9. Minor of matrix and matrix of algebraic complements int s21_calc_complements(matrix_t *A, matrix_t *result);
-10. Matrix determinant int s21_determinant(matrix_t *A, double *result);
-11. Inverse of matrix int s21_inverse_matrix(matrix_t *A, matrix_t *result);
+Библиотека для работы с матрицами включает следующие операции:
 
+1. Создание матриц int s21_create_matrix(int rows, int columns, matrix_t *result);
+2. Очистка матриц void s21_remove_matrix(matrix_t *A);
+3. Сравнение матриц int s21_eq_matrix(matrix_t *A, matrix_t *B);
+4. Сложение матриц int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+5. Вычитание матриц int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+6. Умножение матрицы на скаляр int s21_mult_number(matrix_t *A, double number, matrix_t *result);
+7. Перемножение матриц int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+8. Транспонирование матрицы int s21_transpose(matrix_t *A, matrix_t *result);
+9. Минор матрицы и матрица алгебраических дополнений int s21_calc_complements(matrix_t *A, matrix_t *result);
+10. Детерминант матрицы int s21_determinant(matrix_t *A, double *result);
+11. Обратная матрица int s21_inverse_matrix(matrix_t *A, matrix_t *result);
 
-Makefile used for building the library and tests (with the targets all, clean, test, s21_matrix.a, gcov_report). The gcov_report target generates a gcov report in the form of an html page.
-Unit-tests check the result of implementation by comparing them with the right answers. Tests cover at least 80% of each function.
+Сборка программ настроена с помощью Makefile с соответствующими целями: all, clean, test, s21_matrix.a, gcov_report. Реализовано покрытие интеграционными тестами для всех вариантов флагов и входных значений.
